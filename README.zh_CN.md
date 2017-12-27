@@ -61,6 +61,28 @@ exports.wechatAll = {
 
 ## 详细配置
 
+```js
+// {app_root}/config/config.default.js
+exports.wechatAll = {
+  appid: '',
+  appsecret: '',
+  token: '',
+  encodingAESKey: '',
+  payment: {
+    partnerKey: '',
+    mchId: '',
+    notifyUrl: '',
+    pfx: '',
+  },
+  modules: {
+    message: true,  // 是否启用 co-wechat
+    api: true,  // 是否启用 co-wechat-api
+    oauth: true,  // 是否启用 co-wechat-oauth
+    payment: true,  // 是否启用 co-wechat-payment
+  },
+;
+```
+
 请到 [config/config.default.js](config/config.default.js) 查看详细配置项说明。
 
 ## 单元测试

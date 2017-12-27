@@ -45,7 +45,23 @@ exports.wechatAll = {
 ```js
 // {app_root}/config/config.default.js
 exports.wechatAll = {
-};
+  appid: '',
+  appsecret: '',
+  token: '',
+  encodingAESKey: '',
+  payment: {
+    partnerKey: '',
+    mchId: '',
+    notifyUrl: '',
+    pfx: '',
+  },
+  modules: {
+    message: true,  // enable or disable co-wechat
+    api: true,  // enable or disable co-wechat-api
+    oauth: true,  // enable or disable co-wechat-oauth
+    payment: true,  // enable or disable co-wechat-payment
+  },
+;
 ```
 
 see [config/config.default.js](config/config.default.js) for more detail.

@@ -66,13 +66,39 @@ exports.wechatAll = {
 
 see [config/config.default.js](config/config.default.js) for more detail.
 
+## How
+
+```js
+app.wechat.messageMiddleware //co-wechat middleware
+app.wechat.api  // co-wechat-api
+app.wechat.oauth  // co-wechat-oauth
+app.wechat.payment  // co-wechat-payment
+```
+
 ## Example
 
-<!-- example here -->
+```js
+'use strict';
+const Controller = require('egg').Controller;
+
+module.exports = app => {
+  class WechatController extends Controller {
+  }
+
+  WechatController.prototype.index = app.wechat.messageMiddleware(async (message, ctx) => {
+    ctx.app.wechat.api.sendText(message.FromUserName, 'This is the reply');
+    return `Received your message: ${message.Content}`;
+  });
+
+  return WechatController;
+};
+
+
+```
 
 ## Questions & Suggestions
 
-Please open an issue [here](https://github.com/eggjs/egg/issues).
+Please open an issue [here](https://github.com/qdechochen/egg-wechat-all/issues).
 
 ## License
 

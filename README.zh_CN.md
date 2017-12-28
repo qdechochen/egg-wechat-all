@@ -24,24 +24,11 @@
 Description here.
 -->
 
-## 依赖说明
+## 安装
 
-### 依赖的 egg 版本
-
-egg-wechat-all 版本 | egg 1.x
---- | ---
-1.x | 😁
-0.x | ❌
-
-### 依赖的插件
-<!--
-
-如果有依赖其它插件，请在这里特别说明。如
-
-- security
-- multipart
-
--->
+```bash
+$ npm i egg-wechat-all --save
+```
 
 ## 开启插件
 
@@ -52,13 +39,6 @@ exports.wechatAll = {
   package: 'egg-wechat-all',
 };
 ```
-
-## 使用场景
-
-- Why and What: 描述为什么会有这个插件，它主要在完成一件什么事情。
-尽可能描述详细。
-- How: 描述这个插件是怎样使用的，具体的示例代码，甚至提供一个完整的示例，并给出链接。
-
 ## 详细配置
 
 ```js
@@ -85,13 +65,41 @@ exports.wechatAll = {
 
 请到 [config/config.default.js](config/config.default.js) 查看详细配置项说明。
 
-## 单元测试
 
+## 如何使用
+
+```js
+app.wechat.messageMiddleware //co-wechat middleware
+app.wechat.api  // co-wechat-api
+app.wechat.oauth  // co-wechat-oauth
+app.wechat.payment  // co-wechat-payment
+```
+
+## 代码示例
+
+```js
+'use strict';
+const Controller = require('egg').Controller;
+
+module.exports = app => {
+  class WechatController extends Controller {
+  }
+
+  WechatController.prototype.index = app.wechat.messageMiddleware(async (message, ctx) => {
+    ctx.app.wechat.api.sendText(message.FromUserName, 'This is the reply');
+    return `Received your message: ${message.Content}`;
+  });
+
+  return WechatController;
+};
+
+
+```
 <!-- 描述如何在单元测试中使用此插件，例如 schedule 如何触发。无则省略。-->
 
 ## 提问交流
 
-请到 [egg issues](https://github.com/eggjs/egg/issues) 异步交流。
+请到 [这里](https://github.com/qdechochen/egg-wechat-all/issues) 交流。
 
 ## License
 

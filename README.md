@@ -76,6 +76,7 @@ app.wechat.payment  // co-wechat-payment
 ```
 
 For more details, please refer to the following links.
+
 [co-wechat] (https://github.com/node-webot/co-wechat)
 
 [co-wechat-api] (https://github.com/node-webot/co-wechat-api)

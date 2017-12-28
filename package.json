@@ -1,6 +1,6 @@
 {
   "name": "egg-wechat-all",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "wechat support for egg",
   "eggPlugin": {
     "name": "wechatAll",
@@ -49,9 +49,10 @@
     "autod": "autod"
   },
   "files": [
+    "app",
+    "config",
     "app.js",
-    "agent.js",
-    "config"
+    "lib"
   ],
   "ci": {
     "version": "8, 9"

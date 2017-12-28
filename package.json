@@ -1,6 +1,6 @@
 {
   "name": "egg-wechat-all",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "wechat support for egg",
   "eggPlugin": {
     "name": "wechatAll",
@@ -58,12 +58,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eggjs/egg-wechat-all.git"
+    "url": "git+https://github.com/qdechochen/egg-wechat-all.git"
   },
   "bugs": {
-    "url": "https://github.com/eggjs/egg/issues"
+    "url": "https://github.com/qdechochen/egg-wechat-all/issues"
   },
-  "homepage": "https://github.com/eggjs/egg-wechat-all#readme",
+  "homepage": "https://github.com/qdechochen/egg-wechat-all",
   "author": "qdechochen",
   "license": "MIT"
 }

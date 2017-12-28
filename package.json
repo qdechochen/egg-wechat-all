@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "description": "wechat support for egg",
   "eggPlugin": {
-    "name": "wechatAll"
+    "name": "wechatAll",
+    "dependencies": [
+      "redis"
+    ]
   },
   "keywords": [
     "egg",
@@ -19,7 +22,8 @@
     "co-wechat": "^2.3.0",
     "co-wechat-api": "^3.3.3",
     "co-wechat-oauth": "^2.0.1",
-    "co-wechat-payment": "^0.2.0"
+    "co-wechat-payment": "^0.2.0",
+    "egg-redis": "^1.0.2"
   },
   "devDependencies": {
     "autod": "^3.0.0",

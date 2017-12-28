@@ -75,6 +75,16 @@ app.wechat.oauth  // co-wechat-oauth
 app.wechat.payment  // co-wechat-payment
 ```
 
+更多信息，请参照：
+[co-wechat] (https://github.com/node-webot/co-wechat)
+
+[co-wechat-api] (https://github.com/node-webot/co-wechat-api)
+
+[co-wechat-oauth] (https://github.com/node-webot/co-wechat-oauth)
+
+[co-wechat-payment] (https://github.com/perzy/co-wechat-payment)
+
+
 ## 代码示例
 
 ```js

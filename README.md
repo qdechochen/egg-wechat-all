@@ -64,7 +64,7 @@ exports.wechatAll = {
 ;
 ```
 
-see [config/config.default.js](config/config.default.js) for more detail.
+see [config/config.default.js](config/config.default.js) for more details.
 
 ## How
 
@@ -74,6 +74,15 @@ app.wechat.api  // co-wechat-api
 app.wechat.oauth  // co-wechat-oauth
 app.wechat.payment  // co-wechat-payment
 ```
+
+For more details, please refer to the following links.
+[co-wechat] (https://github.com/node-webot/co-wechat)
+
+[co-wechat-api] (https://github.com/node-webot/co-wechat-api)
+
+[co-wechat-oauth] (https://github.com/node-webot/co-wechat-oauth)
+
+[co-wechat-payment] (https://github.com/perzy/co-wechat-payment)
 
 ## Example
 

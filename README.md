@@ -38,7 +38,9 @@ exports.wechatAll = {
   enable: true,
   package: 'egg-wechat-all',
 };
+
 ```
+[egg-redis](https://www.npmjs.com/package/egg-redis) is required.
 
 ## Configuration
 

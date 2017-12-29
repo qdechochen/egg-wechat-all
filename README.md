@@ -93,10 +93,23 @@ const Controller = require('egg').Controller;
 
 module.exports = app => {
   class WechatController extends Controller {
+    async oauth() {
+      const token = await app.wechat.oauth.getAccessToken(this.ctx.query.code);
+      this.ctx.body = JSON.stringify({
+        query: this.ctx.query,
+        token,
+        user: await app.wechat.api.getUser(token.data.openid),
+      }, 2, 2);
+    }
   }
 
   WechatController.prototype.index = app.wechat.messageMiddleware(async (message, ctx) => {
-    ctx.app.wechat.api.sendText(message.FromUserName, 'This is the reply');
+    ctx.app.wechat.api.sendNews(message.FromUserName, [{
+      title: 'OAuth test',
+      description: 'Please tap this message to start oauth test',
+      url: app.wechat.oauth.getAuthorizeURL('[URL(Route to WechatController.oauth)]', 'MY_STATE', 'snsapi_userinfo'),
+      picurl: '[PIC_URL]',
+    }]);
     return `Received your message: ${message.Content}`;
   });
 
